@@ -1,0 +1,47 @@
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.git
+.mypy_cache
+.pytest_cache
+.hypothesis
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media
+
+# Environment variables
+.env
+
+# Static files
+staticfiles/
+
+# macOS
+.DS_Store
+
+# Visual Studio Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Docker
+docker-compose.override.yml
