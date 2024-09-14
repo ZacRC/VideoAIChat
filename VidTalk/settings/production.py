@@ -5,7 +5,7 @@ load_dotenv('.envprod')
 
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 DEBUG = os.environ.get('DEBUG', 'FALSE').upper() == 'TRUE'
-ALLOWED_HOSTS = ['167.172.224.226']
+ALLOWED_HOSTS = ['167.172.224.226', 'https://167.172.224.226/', 'http://167.172.224.226/']
 
 DATABASES = {
     'default': {
