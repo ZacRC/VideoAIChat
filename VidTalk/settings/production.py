@@ -2,7 +2,7 @@ from .base import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['167.172.224.226', 'https://167.172.224.226/', 'http://167.172.224.226/']
+ALLOWED_HOSTS = ['167.172.224.226']
 
 DATABASES = {
     'default': {
@@ -19,6 +19,6 @@ DATABASES = {
 USE_S3 = True
 
 # Security settings
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = False  # Change this to True once you have HTTPS set up
+SESSION_COOKIE_SECURE = False  # Change this to True once you have HTTPS set up
+CSRF_COOKIE_SECURE = False  # Change this to True once you have HTTPS set up

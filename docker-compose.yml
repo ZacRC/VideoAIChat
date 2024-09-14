@@ -9,7 +9,7 @@ services:
       - static_volume:/app/staticfiles
       - media_volume:/app/media
     env_file:
-      - .env
+      - .envprod
     depends_on:
       - db
   db:
@@ -17,7 +17,11 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     env_file:
-      - .env
+      - .envprod
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
   nginx:
     image: nginx:latest
     ports:
