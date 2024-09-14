@@ -66,3 +66,49 @@ DB_HOST=
 DB_PORT=
 USE_S3=FALSE
 Remember, the .env file should never be committed to version control. It's meant to keep your sensitive information and environment-specific settings separate from your codebase.
+
+
+Now, your project is set up on GitHub. Here's a step-by-step guide on using GitHub in this context:
+Making changes locally:
+Make changes to your project files
+Test the changes locally
+If everything works, stage the changes:
+.
+- Commit the changes:
+"
+Pushing changes to GitHub:
+main
+Creating a release version:
+On GitHub, go to your repository
+Click on "Releases" on the right side
+Click "Create a new release"
+Choose a tag version (e.g., v1.0.0)
+Write a title and description for the release
+Click "Publish release"
+Deploying to your VPS:
+SSH into your VPS
+If it's the first time:
+name
+- If the repository is already cloned:
+main
+- Create or update the .env file with production values
+Rebuild and restart Docker containers:
+d
+- Run migrations:
+migrate
+- Collect static files:
+input
+Rolling back to a previous version:
+On your VPS:
+tag
+- Rebuild and restart Docker containers, run migrations, and collect static files as in step 4.
+Branching for features or bug fixes:
+Create a new branch:
+feature
+- Make changes, commit, and push the branch:
+feature
+- On GitHub, create a pull request to merge the branch into main
+After review, merge the pull request on GitHub
+Pull the changes on your local machine and VPS
+Remember to always keep your .env file and any sensitive information out of version control. When setting up on a new machine or your VPS, you'll need to manually create the .env file with the appropriate values.
+This workflow allows you to develop locally, push changes to GitHub, create releases for significant versions, and easily deploy or roll back on your VPS.
